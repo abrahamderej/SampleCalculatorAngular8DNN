@@ -1,10 +1,8 @@
-
 import { Component } from '@angular/core';
 import { DemoService } from '../Service/demo.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Context } from '../Service/DNN/context.service';
 import { take, mergeMap } from 'rxjs/operators';
-
 
 @Component({
   selector: 'app-root',
@@ -12,10 +10,7 @@ import { take, mergeMap } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title = 'calculator';
-  public num1:number;
-  public num2:number;
-  public result:number;
+  title = 'Calculator';
   webapiResult = '';
 
   constructor(public context: Context, private _demoService: DemoService) {
@@ -45,10 +40,5 @@ private getDataFromWebAPI() {
  log(par: any): string{
     return JSON.stringify(par).toString();
   }
-
-   add() {
-    this.result = this.num1 + this.num2;
-    
-  }
-
 }
+

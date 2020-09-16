@@ -38,7 +38,7 @@ export class Context {
         // Dev settings with minimal ignore settings.
         this.devSettings = Object.assign({}, {
             ignoreMissing$2sxc: false,
-            ignoreMissingServicesFramework: false
+            ignoreMissingServicesFramework: true
         }, devSettings);
 
         
